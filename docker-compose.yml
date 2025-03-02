@@ -18,8 +18,8 @@ services:
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
     restart: always
-    ports:
-      - 18183:80
+    # ports:
+    #   - 18183:80
     labels:
       - com.codebox.port.80
       - com.codebox.port.80.service_name=phpmyadmin
@@ -31,10 +31,14 @@ services:
     environment:
      - GF_SERVER_ROOT_URL=http://my.grafana.server/
      - GF_PLUGINS_PREINSTALL=grafana-clock-panel
-    ports:
-     - '3000:3000'
+    # ports:
+    #  - '3000:3000'
     volumes:
      - 'grafana_storage:/var/lib/grafana'
+    labels:
+      com.codebox.port.3000:
+      com.codebox.port.3000.service_name: grafana
+      com.codebox.port.3000.public: true
 
 volumes:
   test:
