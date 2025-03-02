@@ -27,7 +27,6 @@ services:
 
   grafana:
     image: grafana/grafana-enterprise
-    container_name: grafana
     restart: unless-stopped
     environment:
      - GF_SERVER_ROOT_URL=http://my.grafana.server/
