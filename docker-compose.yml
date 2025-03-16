@@ -23,6 +23,7 @@ services:
     labels:
       - com.codebox.port.phpmyadmin=80
       - com.codebox.port.phpmyadmin.public=false
+      - com.codebox.workspace_path=/etc
 
   grafana:
     image: grafana/grafana-enterprise
