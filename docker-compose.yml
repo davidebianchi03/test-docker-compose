@@ -21,9 +21,8 @@ services:
     # ports:
     #   - 18183:80
     labels:
-      - com.codebox.port.80
-      - com.codebox.port.80.service_name=phpmyadmin
-      - com.codebox.port.80.public=false
+      - com.codebox.port.phpmyadmin=80
+      - com.codebox.port.phpmyadmin.public=false
 
   grafana:
     image: grafana/grafana-enterprise
@@ -36,9 +35,8 @@ services:
     volumes:
      - 'grafana_storage:/var/lib/grafana'
     labels:
-      com.codebox.port.3000:
-      com.codebox.port.3000.service_name: grafana
-      com.codebox.port.3000.public: true
+      com.codebox.port.grafana: 3000
+      com.codebox.port.grafana.public: true
 
 volumes:
   test:
