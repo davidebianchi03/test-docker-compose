@@ -39,7 +39,7 @@ services:
       com.codebox.port.grafana: 3000
       com.codebox.port.grafana.public: true
 
-  grafana:
+  ubuntu:
     image: ubuntu:latest
     restart: unless-stopped
     command: /bin/bash
