@@ -39,6 +39,13 @@ services:
       com.codebox.port.grafana: 3000
       com.codebox.port.grafana.public: true
 
+  grafana:
+    image: ubuntu:latest
+    restart: unless-stopped
+    command: /bin/bash
+    tty: true
+    stdin_open: true
+
 volumes:
   test:
   db_data:
