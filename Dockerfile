@@ -4,7 +4,7 @@ RUN useradd -rm -d /home/vscode -s /bin/bash -G sudo vscode && \
     echo "vscode:password" | chpasswd && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
     chown -R vscode:vscode /home/vscode && \
-    usermod -aG docker vscode
+    usermod -aG vscode
 
 ENV HOME=/home/vscode
 
