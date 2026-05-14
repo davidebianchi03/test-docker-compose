@@ -40,7 +40,7 @@ services:
       com.codebox.port.grafana.public: true
 
   ubuntu:
-    image: ubuntu:latest
+    build: .
     restart: unless-stopped
     command: /bin/bash
     tty: true
